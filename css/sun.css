@@ -1,0 +1,93 @@
+.orbit_path {
+  border: 1px dotted rgba(255, 255, 255, 0.2);
+}
+#sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  border-radius: 50%;
+  animation: colorchange 5s, glow 10s;
+  animation-iteration-count: infinite;
+  font-size: 16em;
+  transform: rotateX(-80deg);
+}
+@keyframes colorchange {
+  0% {
+    background: radial-gradient(#ff3c00 0px, #ffff00);
+  }
+  5% {
+    background: radial-gradient(#ff3c00 4px, #ffff00);
+  }
+  10% {
+    background: radial-gradient(#ff3c00 8px, #ffff00);
+  }
+  15% {
+    background: radial-gradient(#ff3c00 12px, #ffff00);
+  }
+  20% {
+    background: radial-gradient(#ff3c00 16px, #ffff00);
+  }
+  25% {
+    background: radial-gradient(#ff3c00 20px, #ffff00);
+  }
+  30% {
+    background: radial-gradient(#ff3c00 24px, #ffff00);
+  }
+  35% {
+    background: radial-gradient(#ff3c00 28px, #ffff00);
+  }
+  40% {
+    background: radial-gradient(#ff3c00 32px, #ffff00);
+  }
+  45% {
+    background: radial-gradient(#ff3c00 36px, #ffff00);
+  }
+  50% {
+    background: radial-gradient(#ff3c00 40px, #ffff00);
+  }
+  55% {
+    background: radial-gradient(#ff3c00 44px, #ffff00);
+  }
+  60% {
+    background: radial-gradient(#ff3c00 39px, #ffff00);
+  }
+  65% {
+    background: radial-gradient(#ff3c00 35px, #ffff00);
+  }
+  70% {
+    background: radial-gradient(#ff3c00 30px, #ffff00);
+  }
+  75% {
+    background: radial-gradient(#ff3c00 26px, #ffff00);
+  }
+  80% {
+    background: radial-gradient(#ff3c00 22px, #ffff00);
+  }
+  85% {
+    background: radial-gradient(#ff3c00 18px, #ffff00);
+  }
+  90% {
+    background: radial-gradient(#ff3c00 14px, #ffff00);
+  }
+  95% {
+    background: radial-gradient(#ff3c00 10px, #ffff00);
+  }
+  100% {
+    background: radial-gradient(#ff3c00 5px, #ffff00);
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 5px 5px 600px 5px rgba(255, 135, 0, 0.95);
+  }
+  50% {
+    box-shadow: 5px 5px 200px 2px rgba(204, 108, 0, 0.95);
+  }
+  to {
+    box-shadow: 5px 5px 600px 5px rgba(255, 135, 0, 0.95);
+  }
+}

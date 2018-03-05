@@ -1,0 +1,44 @@
+@import "mixins.less";
+@import "VARS";
+
+@COLOR_SUN_CENTER: #ff3c00;
+@COLOR_SUN_SIDE: #ffff00;
+@COLOR_SUN_GLOW: rgba(255,135,0,0.95);
+
+#sun {
+  .sphere(1em);
+  animation: colorchange 5s, glow 10s;
+  animation-iteration-count: infinite;
+  font-size: 16em;
+  transform: rotateX(-@ANGLE_VIEW);
+}
+
+@keyframes colorchange {
+  0% {background: radial-gradient(@COLOR_SUN_CENTER 0px, @COLOR_SUN_SIDE)}
+  5% {background: radial-gradient(@COLOR_SUN_CENTER 4px, @COLOR_SUN_SIDE)}
+  10% {background: radial-gradient(@COLOR_SUN_CENTER 8px, @COLOR_SUN_SIDE)}
+  15% {background: radial-gradient(@COLOR_SUN_CENTER 12px, @COLOR_SUN_SIDE)}
+  20% {background: radial-gradient(@COLOR_SUN_CENTER 16px, @COLOR_SUN_SIDE)}
+  25% {background: radial-gradient(@COLOR_SUN_CENTER 20px, @COLOR_SUN_SIDE)}
+  30% {background: radial-gradient(@COLOR_SUN_CENTER 24px, @COLOR_SUN_SIDE)}
+  35% {background: radial-gradient(@COLOR_SUN_CENTER 28px, @COLOR_SUN_SIDE)}
+  40% {background: radial-gradient(@COLOR_SUN_CENTER 32px, @COLOR_SUN_SIDE)}
+  45% {background: radial-gradient(@COLOR_SUN_CENTER 36px, @COLOR_SUN_SIDE)}
+  50% {background: radial-gradient(@COLOR_SUN_CENTER 40px, @COLOR_SUN_SIDE)}
+  55% {background: radial-gradient(@COLOR_SUN_CENTER 44px, @COLOR_SUN_SIDE)}
+  60% {background: radial-gradient(@COLOR_SUN_CENTER 39px, @COLOR_SUN_SIDE)}
+  65% {background: radial-gradient(@COLOR_SUN_CENTER 35px, @COLOR_SUN_SIDE)}
+  70% {background: radial-gradient(@COLOR_SUN_CENTER 30px, @COLOR_SUN_SIDE)}
+  75% {background: radial-gradient(@COLOR_SUN_CENTER 26px, @COLOR_SUN_SIDE)}
+  80% {background: radial-gradient(@COLOR_SUN_CENTER 22px, @COLOR_SUN_SIDE)}
+  85% {background: radial-gradient(@COLOR_SUN_CENTER 18px, @COLOR_SUN_SIDE)}
+  90% {background: radial-gradient(@COLOR_SUN_CENTER 14px, @COLOR_SUN_SIDE)}
+  95% {background: radial-gradient(@COLOR_SUN_CENTER 10px, @COLOR_SUN_SIDE)}
+  100% {background: radial-gradient(@COLOR_SUN_CENTER 5px, @COLOR_SUN_SIDE)}
+}
+
+@keyframes glow {
+  from { box-shadow: 5px 5px 600px 5px @COLOR_SUN_GLOW;}
+  50%	 { box-shadow: 5px 5px 200px 2px darken(@COLOR_SUN_GLOW, 10%); }
+  to   { box-shadow: 5px 5px 600px 5px @COLOR_SUN_GLOW; }
+}
