@@ -1,0 +1,47 @@
+@import "mixins.less";
+@import "VARS";
+
+.moon__planet {
+  .sphere(1em);
+  //background-image: url(../img/);
+  background-color: #8f8f8f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  top: -1%;
+  margin-left: -0.5em;
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+
+.moon__position {
+  position: absolute;
+  width: @MOON_POS_SIZE;
+  height: @MOON_POS_SIZE;
+  margin-left: -@MOON_POS_SIZE/2;
+  margin-top: -@MOON_POS_SIZE/2;
+  left: 100%;
+  top: 50%;
+  animation-name: invert;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: @MOON_ROTATION_PERIOD;
+}
+.moon_orbit {
+  .sphere(10em);
+  .orbit_path;
+  animation: moon_orbit_animation @MOON_ROTATION_PERIOD infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes moon_orbit_animation {
+  0% {
+    transform: rotateX(90deg) rotateZ(0deg); }
+
+  100% {
+    transform: rotateX(90deg) rotateZ(-360deg); }
+}
+@keyframes invert {
+  0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); }
+}

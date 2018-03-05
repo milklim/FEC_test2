@@ -1,5 +1,5 @@
 .orbit_path {
-  border: 1px dotted rgba(255, 255, 255, 0.2);
+  border: 1px dotted rgba(255, 255, 255, 0.3);
 }
 #sun {
   position: absolute;
@@ -13,7 +13,7 @@
   animation: colorchange 5s, glow 10s;
   animation-iteration-count: infinite;
   font-size: 16em;
-  transform: rotateX(-80deg);
+  transform: rotateX(-75deg);
 }
 @keyframes colorchange {
   0% {
